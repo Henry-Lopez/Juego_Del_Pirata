@@ -1,0 +1,9 @@
+playa montana 4
+montana cueva 3
+cueva bosque 2
+bosque lago 5
+cueva ruinas 6
+ruinas templo 4
+templo cima 3
+lago pantano 4
+pantano cascada 2

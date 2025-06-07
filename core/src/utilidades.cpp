@@ -1,6 +1,8 @@
 #include "utilidades.h"
 #include <fstream>
 #include <iostream>
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
 
 // Convierte texto a minúsculas
 string aMinusculas(const string& texto) {
@@ -70,4 +72,26 @@ void imprimirRuta(const Lista& ruta) {
         if (i < ruta.tamano() - 1) cout << " -> ";
     }
     cout << endl;
+}
+
+// ✅ Exporta la ruta encontrada como archivo JSON para visualización
+void exportarRutaJSON(const Lista& ruta, const string& archivo, const string& metodo) {
+    json j;
+    j["metodo"] = metodo;
+
+    for (int i = 0; i < ruta.tamano() - 1; ++i) {
+        j["ruta"].push_back({
+            {"origen", ruta.obtener(i)},
+            {"destino", ruta.obtener(i + 1)}
+        });
+    }
+
+    ofstream out(archivo);
+    if (out.is_open()) {
+        out << j.dump(4);
+        out.close();
+        cout << "Ruta exportada a " << archivo << " con metodo: " << metodo << endl;
+    } else {
+        cerr << "No se pudo escribir " << archivo << endl;
+    }
 }

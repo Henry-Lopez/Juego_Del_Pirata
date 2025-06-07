@@ -18,25 +18,57 @@ DecisionTree::~DecisionTree() {
     liberar(raiz);
 }
 
-// Construye un árbol de ejemplo fijo
 void DecisionTree::construirArbolEjemplo() {
-    // Ejemplo simple: si la pista contiene "sol", es cueva; si no, es bosque.
-    raiz = new NodoDecision("sol", "");
+    raiz = new NodoDecision("mina", "");  // ➤ minas antiguas → ruinas
+    raiz->derecha = new NodoDecision("", "ruinas");
 
-    raiz->izquierda = new NodoDecision("agua", "bosque");      // si no tiene "sol" pero tiene "agua"
-    raiz->izquierda->izquierda = new NodoDecision("", "playa"); // si no tiene "agua" → playa
-    raiz->izquierda->derecha = new NodoDecision("", "lago");   // si tiene "agua" → lago
+    raiz->izquierda = new NodoDecision("ruina", "");
+    raiz->izquierda->derecha = new NodoDecision("", "ruinas");
 
-    raiz->derecha = new NodoDecision("", "cueva");             // si contiene "sol"
+    raiz->izquierda->izquierda = new NodoDecision("pantano", "");
+    raiz->izquierda->izquierda->derecha = new NodoDecision("", "pantano");
+
+    raiz->izquierda->izquierda->izquierda = new NodoDecision("cueva", "");
+    raiz->izquierda->izquierda->izquierda->derecha = new NodoDecision("", "cueva");
+
+    raiz->izquierda->izquierda->izquierda->izquierda = new NodoDecision("fortaleza", "");
+    raiz->izquierda->izquierda->izquierda->izquierda->derecha = new NodoDecision("", "templo");
+
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda = new NodoDecision("ciudad", "");
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->derecha = new NodoDecision("", "ciudad");
+
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda = new NodoDecision("torre", "");
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->derecha = new NodoDecision("", "torre");
+
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda = new NodoDecision("jinetes", "");
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->derecha = new NodoDecision("", "llanura");
+
+    // 🌞 compatibilidad con pistas antiguas (isla del pirata)
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda = new NodoDecision("sol", "");
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->derecha = new NodoDecision("", "cueva");
+
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda = new NodoDecision("agua", "");
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->derecha = new NodoDecision("", "lago");
+
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda = new NodoDecision("antiguas", "");
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->derecha = new NodoDecision("", "ruinas");
+
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda = new NodoDecision("altura", "");
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->derecha = new NodoDecision("", "montana");
+
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda = new NodoDecision("mapa", "");
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->derecha = new NodoDecision("", "cima");
+
+    // 🌲 default: bosque
+    raiz->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda->izquierda = new NodoDecision("", "bosque");
 }
 
-// Función recursiva para interpretar la pista
+
+// Recorre recursivamente el árbol para interpretar la pista
 string DecisionTree::interpretarRecursivo(NodoDecision* nodo, const string& pista) const {
     if (nodo == nullptr) return "desconocido";
-
     if (nodo->clave == "") return nodo->valor;
 
-    // Si la pista contiene la palabra clave → derecha
     if (pista.find(nodo->clave) != string::npos) {
         return interpretarRecursivo(nodo->derecha, pista);
     } else {
@@ -44,12 +76,12 @@ string DecisionTree::interpretarRecursivo(NodoDecision* nodo, const string& pist
     }
 }
 
-// Punto de entrada para interpretar la pista completa
+// Punto de entrada
 string DecisionTree::interpretarPista(const string& pista) const {
     return interpretarRecursivo(raiz, pista);
 }
 
-// Libera recursivamente memoria del árbol
+// Libera memoria
 void DecisionTree::liberar(NodoDecision* nodo) {
     if (nodo == nullptr) return;
     liberar(nodo->izquierda);

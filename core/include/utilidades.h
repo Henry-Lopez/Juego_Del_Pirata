@@ -20,4 +20,7 @@ void guardarRutaEnArchivo(const string& rutaArchivo, const Lista& ruta);
 // Imprime la ruta por consola
 void imprimirRuta(const Lista& ruta);
 
+// ✅ Exporta la ruta encontrada como archivo JSON para visualización (con método)
+void exportarRutaJSON(const Lista& ruta, const string& archivo, const string& metodo);
+
 #endif

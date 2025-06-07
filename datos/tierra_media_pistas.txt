@@ -1,0 +1,15 @@
+hobbiton: Tierra tranquila y hogar de los hobbits.
+bree: Pueblo de paso entre la Comarca y el mundo exterior.
+rivendel: Refugio elfico de sabiduria y paz.
+moria: Minas antiguas, hogar de enanos, ahora infestada.
+lothlorien: Bosque encantado gobernado por Galadriel.
+rohan: Tierra de jinetes y valles abiertos.
+minas_tirith: Fortaleza blanca que protege Gondor.
+mordor: Territorio oscuro donde reside Sauron.
+tharbad: Ciudad en ruinas sobre el rio Gwathlo.
+fangorn: Bosque antiguo donde habitan los ents.
+edoras: Capital de Rohan con un gran salon dorado.
+helms_deep: Fortaleza protegida por un abismo.
+isengard: Torre controlada por Saruman, antes bastion elfico.
+minas_morgul: Antigua ciudad de Gondor, ahora corrompida.
+osgiliath: Ruinas divididas por el rio Anduin.

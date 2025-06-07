@@ -2,6 +2,9 @@
 #define GRAFO_H
 
 #include <string>
+#include <fstream>
+#include <nlohmann/json.hpp> // JSON para exportación
+using json = nlohmann::json;
 using namespace std;
 
 const int MAX_NODOS = 100;
@@ -19,8 +22,9 @@ struct Nodo {
     string nombre;
     string pista;
     Arista* adyacentes;
+    float x, y; // 📍 Coordenadas para visualización
 
-    Nodo() : nombre(""), pista(""), adyacentes(nullptr) {}
+    Nodo() : nombre(""), pista(""), adyacentes(nullptr), x(0), y(0) {}
 };
 
 class Grafo {
@@ -29,14 +33,21 @@ private:
     int cantidadNodos;
 
     int buscarIndice(const string& nombre) const;
+    string limpiarTexto(const string& texto) const;
 
 public:
     Grafo();
 
     void agregarNodo(const string& nombre, const string& pista = "");
     void agregarArista(const string& origen, const string& destino, int costo);
-    void cargarDesdeArchivo(const string& ruta);        // Cargar conexiones del mapa
-    void asignarPistas(const string& rutaPistas);       // Cargar pistas por nodo
+    void cargarDesdeArchivo(const string& ruta);
+    void asignarPistas(const string& rutaPistas);
+
+    // 🔄 NUEVO: Asignar coordenadas (manual)
+    void asignarCoordenadas();
+
+    // 🌐 NUEVO: Exportar JSON
+    void exportarAJson(const string& ruta);
 
     int getCantidad() const;
     Nodo* getNodo(int indice);

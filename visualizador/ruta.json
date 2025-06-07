@@ -1,0 +1,21 @@
+{
+    "metodo": "bfs",
+    "ruta": [
+        {
+            "destino": "bree",
+            "origen": "rivendel"
+        },
+        {
+            "destino": "tharbad",
+            "origen": "bree"
+        },
+        {
+            "destino": "minas_tirith",
+            "origen": "tharbad"
+        },
+        {
+            "destino": "mordor",
+            "origen": "minas_tirith"
+        }
+    ]
+}

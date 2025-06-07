@@ -1,0 +1,10 @@
+playa: El viento sopla desde la costa
+montana: Sube hacia las alturas en busca de respuestas
+cueva: Busca donde el sol no llega
+bosque: El canto de aves te guia
+lago: Silencio y calma, pero no es el final
+ruinas: Piedras antiguas guardan secretos
+templo: Siente la presencia de algo sagrado
+cima: Desde aqui se ve todo el mapa
+pantano: El terreno es fangoso y misterioso
+cascada: Donde el agua cae, el eco responde

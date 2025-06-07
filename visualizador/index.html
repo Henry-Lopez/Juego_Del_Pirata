@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>🗺️ Mapa de Tierra Media - Visualizador de Ruta</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<h1>🗺️ Mapa de Tierra Media</h1>
+
+<!-- Contenedor horizontal principal -->
+<div id="contenedorPrincipal">
+
+    <!-- 🧭 Sección del mapa con fondo e interactividad -->
+    <div id="mapa">
+        <img src="tierra_media.jpg" id="fondo" alt="Mapa de Tierra Media">
+        <canvas id="grafoCanvas"></canvas>
+
+        <!-- 👣 Personaje animado que avanza por la ruta -->
+        <img id="personaje" src="pngwing.com.png" alt="Pirata" style="position: absolute; top: 0; left: 0; width: 32px; height: 32px; display: none; pointer-events: none;">
+    </div>
+
+    <!-- 📜 Panel lateral de información -->
+    <div id="panelInformacion">
+        <h2>📍 Información de la Ruta</h2>
+
+        <div id="infoNodoActual">
+            <p><strong>Nodo actual:</strong> --</p>
+            <p><strong>Vecinos:</strong> --</p>
+            <p><strong>Tipo de ruta:</strong> --</p>
+            <p><strong>Peso total:</strong> --</p>
+        </div>
+
+        <div id="analisisNodo">
+            <!-- Aquí se mostrará si el nodo es cuello de botella o frontera -->
+        </div>
+
+        <div id="tablaRuta">
+            <!-- Tabla resumen con pasos de la ruta y pesos -->
+        </div>
+    </div>
+</div>
+
+<!-- 🔘 Botones de navegación -->
+<button id="pasoBtn">Siguiente nodo visitado</button>
+<button id="reproducirBtn">▶ Reproducir recorrido</button>
+
+<!-- 📜 Script principal -->
+<script src="script.js"></script>
+</body>
+</html>

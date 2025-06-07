@@ -1,0 +1,186 @@
+{
+    "conexiones": [
+        {
+            "destino": "tharbad",
+            "origen": "bree",
+            "peso": 5
+        },
+        {
+            "destino": "rivendel",
+            "origen": "bree",
+            "peso": 6
+        },
+        {
+            "destino": "hobbiton",
+            "origen": "bree",
+            "peso": 4
+        },
+        {
+            "destino": "rivendel",
+            "origen": "moria",
+            "peso": 5
+        },
+        {
+            "destino": "rohan",
+            "origen": "lothlorien",
+            "peso": 8
+        },
+        {
+            "destino": "moria",
+            "origen": "lothlorien",
+            "peso": 3
+        },
+        {
+            "destino": "osgiliath",
+            "origen": "minas_tirith",
+            "peso": 1
+        },
+        {
+            "destino": "tharbad",
+            "origen": "minas_tirith",
+            "peso": 9
+        },
+        {
+            "destino": "mordor",
+            "origen": "minas_tirith",
+            "peso": 10
+        },
+        {
+            "destino": "rohan",
+            "origen": "minas_tirith",
+            "peso": 7
+        },
+        {
+            "destino": "lothlorien",
+            "origen": "fangorn",
+            "peso": 4
+        },
+        {
+            "destino": "helms_deep",
+            "origen": "edoras",
+            "peso": 2
+        },
+        {
+            "destino": "minas_tirith",
+            "origen": "edoras",
+            "peso": 4
+        },
+        {
+            "destino": "fangorn",
+            "origen": "edoras",
+            "peso": 3
+        },
+        {
+            "destino": "isengard",
+            "origen": "helms_deep",
+            "peso": 3
+        },
+        {
+            "destino": "moria",
+            "origen": "isengard",
+            "peso": 6
+        },
+        {
+            "destino": "osgiliath",
+            "origen": "minas_morgul",
+            "peso": 1
+        },
+        {
+            "destino": "mordor",
+            "origen": "minas_morgul",
+            "peso": 2
+        }
+    ],
+    "nodos": [
+        {
+            "nombre": "hobbiton",
+            "pista": " Tierra tranquila y hogar de los hobbits.",
+            "x": 160.0,
+            "y": 515.0
+        },
+        {
+            "nombre": "bree",
+            "pista": " Pueblo de paso entre la Comarca y el mundo exterior.",
+            "x": 200.0,
+            "y": 470.0
+        },
+        {
+            "nombre": "rivendel",
+            "pista": " Refugio elfico de sabiduria y paz.",
+            "x": 320.0,
+            "y": 390.0
+        },
+        {
+            "nombre": "moria",
+            "pista": " Minas antiguas, hogar de enanos, ahora infestada.",
+            "x": 400.0,
+            "y": 460.0
+        },
+        {
+            "nombre": "lothlorien",
+            "pista": " Bosque encantado gobernado por Galadriel.",
+            "x": 470.0,
+            "y": 440.0
+        },
+        {
+            "nombre": "rohan",
+            "pista": " Tierra de jinetes y valles abiertos.",
+            "x": 520.0,
+            "y": 530.0
+        },
+        {
+            "nombre": "minas_tirith",
+            "pista": " Fortaleza blanca que protege Gondor.",
+            "x": 630.0,
+            "y": 575.0
+        },
+        {
+            "nombre": "mordor",
+            "pista": " Territorio oscuro donde reside Sauron.",
+            "x": 770.0,
+            "y": 580.0
+        },
+        {
+            "nombre": "tharbad",
+            "pista": " Ciudad en ruinas sobre el rio Gwathlo.",
+            "x": 250.0,
+            "y": 530.0
+        },
+        {
+            "nombre": "fangorn",
+            "pista": " Bosque antiguo donde habitan los ents.",
+            "x": 500.0,
+            "y": 500.0
+        },
+        {
+            "nombre": "edoras",
+            "pista": " Capital de Rohan con un gran salon dorado.",
+            "x": 550.0,
+            "y": 510.0
+        },
+        {
+            "nombre": "helms_deep",
+            "pista": " Fortaleza protegida por un abismo.",
+            "x": 520.0,
+            "y": 550.0
+        },
+        {
+            "nombre": "isengard",
+            "pista": " Torre controlada por Saruman, antes bastion elfico.",
+            "x": 450.0,
+            "y": 500.0
+        },
+        {
+            "nombre": "minas_morgul",
+            "pista": " Antigua ciudad de Gondor, ahora corrompida.",
+            "x": 710.0,
+            "y": 565.0
+        },
+        {
+            "nombre": "osgiliath",
+            "pista": " Ruinas divididas por el rio Anduin.",
+            "x": 670.0,
+            "y": 560.0
+        }
+    ]
+}
