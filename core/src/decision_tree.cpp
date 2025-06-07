@@ -1,4 +1,6 @@
+#include <iostream>
 #include "decision_tree.h"
+using namespace std;
 
 // Constructor del nodo
 NodoDecision::NodoDecision(const string& k, const string& v) {
@@ -88,3 +90,21 @@ void DecisionTree::liberar(NodoDecision* nodo) {
     liberar(nodo->derecha);
     delete nodo;
 }
+
+void mostrarNodo(const NodoDecision* nodo, int nivel) {
+    if (!nodo) return;
+    string indent(nivel * 2, ' ');
+    if (nodo->clave != "")
+        cout << indent << "- " << nodo->clave << endl;
+    if (nodo->valor != "")
+        cout << indent << "  => " << nodo->valor << endl;
+
+    mostrarNodo(nodo->izquierda, nivel + 1);
+    mostrarNodo(nodo->derecha, nivel + 1);
+}
+
+void DecisionTree::mostrar() const {
+    cout << "\n📚 Árbol de decisiones:\n";
+    mostrarNodo(raiz, 0);
+}
+

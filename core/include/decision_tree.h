@@ -27,6 +27,9 @@ public:
 
     void construirArbolEjemplo(); // crea árbol fijo básico
     string interpretarPista(const string& pista) const; // analiza pista y retorna ubicación
+
+    void mostrar() const;
+
 };
 
 #endif

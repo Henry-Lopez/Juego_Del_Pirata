@@ -33,6 +33,7 @@ int main() {
         cout << "| 7.   Buscar ruta con Dijkstra             |\n";
         cout << "| 8.   Mostrar ruta encontrada              |\n";
         cout << "| 9.   Guardar ruta en archivo              |\n";
+        cout << "| 10. Ver árbol de decisiones              |\n";
         cout << "| 0.   Salir                                |\n";
         cout << "+===========================================+\n";
         cout << "Seleccione una opcion: ";
@@ -170,6 +171,11 @@ int main() {
             case 0:
                 cout << "Saliendo del programa...\n";
                 break;
+
+            case 10:
+                arbol.mostrar();
+                break;
+
 
             default:
                 cout << "Opcion invalida.\n";

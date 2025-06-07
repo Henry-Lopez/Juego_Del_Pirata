@@ -1,10 +1,6 @@
 {
-    "metodo": "bfs",
+    "metodo": "dijkstra",
     "ruta": [
-        {
-            "destino": "bree",
-            "origen": "rivendel"
-        },
         {
             "destino": "tharbad",
             "origen": "bree"
@@ -14,8 +10,16 @@
             "origen": "tharbad"
         },
         {
-            "destino": "mordor",
+            "destino": "osgiliath",
             "origen": "minas_tirith"
+        },
+        {
+            "destino": "minas_morgul",
+            "origen": "osgiliath"
+        },
+        {
+            "destino": "mordor",
+            "origen": "minas_morgul"
         }
     ]
 }
